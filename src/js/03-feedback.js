@@ -7,13 +7,12 @@ const message = document.querySelector('[name="message"]');
 updateForm();
 
 
-form.addEventListener("input", saveMessage, 500);
+form.addEventListener("input", throttle(saveMessage), 500);
 
 
-function saveMessage(e) {
-    e.preventDefault();
-    const {
-        elements: { email, message } } = e.currentTarget;
+function saveMessage() {
+    // e.preventDefault();
+    // const {elements: { email, message } } = currentTarget;
 
     const inputData = {
        email: email.value,
