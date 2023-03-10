@@ -11,8 +11,6 @@ form.addEventListener("input", throttle(saveMessage), 500);
 
 
 function saveMessage() {
-    // e.preventDefault();
-    // const {elements: { email, message } } = currentTarget;
 
     const inputData = {
        email: email.value,
