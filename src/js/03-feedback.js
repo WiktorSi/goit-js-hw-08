@@ -7,7 +7,7 @@ const message = document.querySelector('[name="message"]');
 updateForm();
 
 
-form.addEventListener("input", throttle(saveMessage), 500);
+form.addEventListener("input", throttle(saveMessage, 500));
 
 
 function saveMessage() {
